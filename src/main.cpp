@@ -1211,7 +1211,7 @@ void static PruneOrphanBlocks()
 int64_t GetBlockValue(int nHeight, int64_t nFees)
 {
     int64_t nSubsidy = 331776 * COIN;
-    int halvings = 0;
+    int halvings = nHeight / Params().SubsidyHalvingInterval();
 
     // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
