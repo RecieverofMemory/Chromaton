@@ -1240,7 +1240,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
     const int64_t nAverageBlocks = 12;
-    const int64_t nTargetSpacing = 1500; // 1500 = retarget every 10 blocks
+    const int64_t nTargetSpacing = 150; // 150 = retarget every block
     const int64_t nTargetTimespan = nAverageBlocks * nTargetSpacing;
 
     if (pindexLast == NULL || pindexLast->nHeight <= nAverageBlocks)
