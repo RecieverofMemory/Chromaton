@@ -74,7 +74,7 @@ void EraseOrphansFor(NodeId peer);
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Yenten Signed Message:\n";
+const string strMessageMagic = "Chromaton Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1210,17 +1210,17 @@ void static PruneOrphanBlocks()
 
 int64_t GetBlockValue(int nHeight, int64_t nFees)
 {
-    int64_t nSubsidy = 50 * COIN;
-    int halvings = nHeight / Params().SubsidyHalvingInterval();
+    int64_t nSubsidy = 331776 * COIN;
+    int halvings = 0;
 
     // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
-        return nFees;
+        return nSubsidy;
 
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
 
-    return nSubsidy + nFees;
+    return nSubsidy;
 }
 
 //
@@ -1240,7 +1240,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
     const int64_t nAverageBlocks = 12;
-    const int64_t nTargetSpacing = 120;
+    const int64_t nTargetSpacing = 1500; // 1500 = retarget every 10 blocks
     const int64_t nTargetTimespan = nAverageBlocks * nTargetSpacing;
 
     if (pindexLast == NULL || pindexLast->nHeight <= nAverageBlocks)
@@ -1704,7 +1704,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("yenten-scriptch");
+    RenameThread("chromaton-scriptch");
     scriptcheckqueue.Thread();
 }
 
