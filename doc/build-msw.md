@@ -58,6 +58,7 @@ Boost
 MSYS shell:
 
 download boost jam 3.1.18
+
 	cd to boost jam folder
 	sudo sh ./build.sh
 	cd .. (back up directories)
