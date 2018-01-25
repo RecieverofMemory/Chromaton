@@ -42,16 +42,16 @@ un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
 
 	cd /c/openssl-1.0.1k-mgw
-	./config
-	make
+	sudo ./config
+	sudo make
 
 Berkeley DB
 -----------
 MSYS shell:
 
 	cd /c/db-4.8.30.NC-mgw/build_unix
-	sh ../dist/configure --enable-mingw --enable-cxx
-	make
+	sudo sh ../dist/configure --enable-mingw --enable-cxx
+	sudo make
 
 Boost
 -----
@@ -59,7 +59,7 @@ MSYS shell:
 
 	downloaded boost jam 3.1.18
 	cd \boost-1.5x.0-mgw
-	bjam toolset=gcc --build-type=complete stage
+	sudo bjam toolset=gcc --build-type=complete stage
 
 MiniUPnPc
 ---------
