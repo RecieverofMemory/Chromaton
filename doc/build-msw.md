@@ -7,6 +7,25 @@ Compilers Supported
 TODO: What works?
 Note: releases are cross-compiled using mingw running on Linux.
 
+Primer:
+I am using Ubuntu on windows 10 (google it to find out how to get it, in the microsoft store there will be an "update" button to the right of the "get ubuntu" button so you will need to update if you can't get ubuntu.  You can also just use linux ubuntu.
+
+Some important commands to know:
+
+sudo and sudo su
+	
+	the sudo command makes you the root user which is required if you ever try something and it says "permission denied".  If sudo isn't enough try sudo su.  This puts you in a root user state for the rest of your session.
+cd and cd ..
+
+	cd command picks a folder to enter.  cd ..  takes you back up a level in the directory.
+	
+ls
+
+	ls command lists all the files in the folder you are currently in.  this is essential to know the directory to "cd" into.
+./
+
+	this runs a given file.
+
 
 Dependencies
 ------------
