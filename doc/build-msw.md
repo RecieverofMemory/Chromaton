@@ -40,7 +40,7 @@ Libraries you need to download separately and build:
 	OpenSSL         \openssl-1.0.1k		http://www.openssl.org/source/
 	Berkeley DB     \db-4.8.30.NC		http://www.oracle.com/technology/software/products/berkeley-db/index.html
 	Boost           \boost-1.55.0		http://www.boost.org/users/download/
-	Boost Jam	\boost-jam-3.1.18.tgz	https://sourceforge.net/projects/boost/files/boost-jam/3.1.18/
+	Boost Jam	\boost-jam-3.1.18	https://sourceforge.net/projects/boost/files/boost-jam/3.1.18/
 	miniupnpc       \miniupnpc-2.0		http://miniupnp.tuxfamily.org/files/
 
 Their licenses:
@@ -48,6 +48,7 @@ Their licenses:
 	OpenSSL        Old BSD license with the problematic advertising requirement
 	Berkeley DB    New BSD license with additional requirement that linked software must be free open source
 	Boost          MIT-like license
+	Boost Jam      MIT-Like liscence?
 	miniupnpc      New (3-clause) BSD license
 
 Versions used in this release:
@@ -55,6 +56,7 @@ Versions used in this release:
 	OpenSSL      1.0.1k
 	Berkeley DB  4.8.30.NC
 	Boost        1.55.0
+	Boost Jam    3.1.18
 	miniupnpc    2.0
 
 First:
@@ -71,13 +73,13 @@ Do this for all the packages above plus boost jam.
 
 OpenSSL
 -------
-MSYS shell:	
+MSYS shell (or the Ubuntu window in WSL -windows subsystem linux-):	
 	
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
 
 For me it was 'C:\MinGW\bin\mingw32-make.exe' to '/c/MinGW/bin/mingw32-make.exe'
 
-	cd /c/openssl-1.0.1k
+	cd /openssl-1.0.1k
 	sudo ./config
 	sudo make
 
@@ -85,7 +87,8 @@ Berkeley DB
 -----------
 MSYS shell:
 
-	cd /c/db-4.8.30.NC-mgw/build_unix
+	cd /db-4.8.30.NC
+	cd /build_unix
 	sudo sh ../dist/configure --enable-mingw --enable-cxx
 	sudo make
 
@@ -96,9 +99,9 @@ download boost jam 3.1.18
 
 building boost jam http://boost.sourceforge.net/doc/html/jam/building.html
 
-	cd to boost jam folder
+	cd /boost-jam-3.1.18
 	sudo sh ./build.sh
-	cd \boost-1.55.0
+	cd /boost_1_55_0
 	sudo bjam toolset=gcc --layout=versioned --build-type=complete stage
 
 MiniUPnPc
