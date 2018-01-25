@@ -12,7 +12,7 @@ If you are using windows ubuntu I think you will need to have windows mingw inst
 
 Finding your linux files in your windows system:
 
-C:\Users\{your user name}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home
+C:\Users\{your_user_name}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home
 
 Some important commands to know:
 
