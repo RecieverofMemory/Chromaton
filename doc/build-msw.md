@@ -14,14 +14,14 @@ Some important commands to know:
 
 sudo and sudo su
 	
-	the sudo command makes you the root user which is required if you ever try something and it says "permission denied".  If you 		try to cd into a directory and it says permission denied, then do sudo su then hit enter, then try to cd into the directory.  		This puts you in a root user state for the rest of your session (super user).
+	the sudo command makes you the root user which is required if you ever try something and it says "permission denied".  If you try to cd into a directory and it says permission denied, then do sudo su then hit enter, then try to cd into the directory.  This puts you in a root user state for the rest of your session (super user).
 cd and cd ..
 
 	cd (change directory) command picks a folder to enter.  cd ..  takes you back up a level in the directory.
 	
 ls
 
-	ls (lists) command lists all the files in the folder you are currently in.  this is essential to know the directory to "cd" 		into.
+	ls (lists) command lists all the files in the folder you are currently in.  this is essential to know the directory to "cd" into.
 ./
 
 	this runs a given file.
