@@ -56,10 +56,13 @@ MSYS shell:
 Boost
 -----
 MSYS shell:
+download boost jam 3.1.18
+building boost jam http://boost.sourceforge.net/doc/html/jam/building.html
 
-	downloaded boost jam 3.1.18
+	cd to boost jam folder
+	sudo sh ./build.sh
 	cd \boost-1.5x.0-mgw
-	sudo bjam toolset=gcc --build-type=complete stage
+	sudo bjam toolset=gcc --layout=versioned --build-type=complete stage
 
 MiniUPnPc
 ---------
