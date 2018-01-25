@@ -76,6 +76,7 @@ Boost
 -----
 MSYS shell:
 download boost jam 3.1.18
+
 building boost jam http://boost.sourceforge.net/doc/html/jam/building.html
 
 	cd to boost jam folder
