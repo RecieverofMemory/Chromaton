@@ -14,14 +14,14 @@ Some important commands to know:
 
 sudo and sudo su
 	
-	the sudo command makes you the root user which is required if you ever try something and it says "permission denied".  If sudo isn't enough try sudo su.  This puts you in a root user state for the rest of your session.
+	the sudo command makes you the root user which is required if you ever try something and it says "permission denied".  If you 		try to cd into a directory and it says permission denied, then do sudo su then hit enter, then try to cd into the directory.  		This puts you in a root user state for the rest of your session (super user).
 cd and cd ..
 
-	cd command picks a folder to enter.  cd ..  takes you back up a level in the directory.
+	cd (change directory) command picks a folder to enter.  cd ..  takes you back up a level in the directory.
 	
 ls
 
-	ls command lists all the files in the folder you are currently in.  this is essential to know the directory to "cd" into.
+	ls (lists) command lists all the files in the folder you are currently in.  this is essential to know the directory to "cd" 		into.
 ./
 
 	this runs a given file.
@@ -58,12 +58,15 @@ OpenSSL
 MSYS shell:
 
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
+
 https://pureinfotech.com/extract-tar-gz-files-windows-10/
+
 	put the downloaded tar files into the C:
 	sudo tar -xvzf /mnt/c/PATH/TO/TAR-FILE/Desktop/FILE-NAME.tar.gz 
 	
 	
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
+
 For me it was 'C:\MinGW\bin\mingw32-make.exe' to '/c/MinGW/bin/mingw32-make.exe'
 
 	cd /c/openssl-1.0.1k-mgw
@@ -97,16 +100,16 @@ UPnP support is optional, make with `USE_UPNP=` to disable it.
 MSYS shell:
 
 	cd /c/miniupnpc-2.0-mgw
-	make -f Makefile.mingw
-	mkdir miniupnpc
-	cp *.h miniupnpc/
+	sudo make -f Makefile.mingw
+	sudo mkdir miniupnpc
+	sudo cp *.h miniupnpc/
 
 Yenten
 -------
 MSYS shell:
 
 	cd \yenten
-	sh autogen.sh
-	sh configure
-	mingw32-make
-	strip yentend.exe
+	sudo sh autogen.sh
+	sudo sh configure
+	sudo mingw32-make
+	sudo strip yentend.exe
