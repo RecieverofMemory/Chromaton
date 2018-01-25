@@ -10,7 +10,7 @@ Primer:
 I am using Ubuntu on windows 10 (google it to find out how to get it, in the microsoft store there will be an "update" button to the right of the "get ubuntu" button so you will need to update if you can't get ubuntu.  You can also just use linux ubuntu.)
 If you are using windows ubuntu I think you will need to have windows mingw installed in the C: drive.
 
-Finding your linux files in your windows system; once you untar from the C: your new folders will be located here:
+Finding your linux files in your windows system; once you untar (don't worry we will get to this later) from the C: your new folders will be located here:
 
 C:\Users\your_user_name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home
 
