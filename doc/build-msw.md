@@ -114,6 +114,9 @@ MSYS/WSL shell:
 	sudo make -f Makefile.mingw  //need to be mingw version or just Makefile?
 	sudo mkdir miniupnpc
 	sudo cp *.h miniupnpc/
+	//sudo su
+	//sudo make install
+	//exit
 
 Yenten
 -------
