@@ -39,7 +39,7 @@ Libraries you need to download separately and build:
 	--------------------------------------------------------------------------------------------------------------------
 	OpenSSL         \openssl-1.0.1k		http://www.openssl.org/source/
 	Berkeley DB     \db-4.8.30.NC		http://www.oracle.com/technology/software/products/berkeley-db/index.html
-	Boost           \boost-1.55.0		http://www.boost.org/users/download/
+	Boost           \boost_1_55_0		http://www.boost.org/users/download/
 	Boost Jam	\boost-jam-3.1.18	https://sourceforge.net/projects/boost/files/boost-jam/3.1.18/
 	miniupnpc       \miniupnpc-2.0		http://miniupnp.tuxfamily.org/files/
 
@@ -85,7 +85,7 @@ For me it was 'C:\MinGW\bin\mingw32-make.exe' to '/c/MinGW/bin/mingw32-make.exe'
 
 Berkeley DB
 -----------
-MSYS shell:
+MSYS/WSL shell:
 
 	cd /db-4.8.30.NC
 	cd /build_unix
@@ -94,7 +94,7 @@ MSYS shell:
 
 Boost
 -----
-MSYS shell:
+MSYS/WSL shell:
 download boost jam 3.1.18
 
 building boost jam http://boost.sourceforge.net/doc/html/jam/building.html
@@ -108,16 +108,16 @@ MiniUPnPc
 ---------
 UPnP support is optional, make with `USE_UPNP=` to disable it.
 
-MSYS shell:
+MSYS/WSL shell:
 
-	cd /c/miniupnpc-2.0
+	cd /miniupnpc-2.0
 	sudo make -f Makefile.mingw
 	sudo mkdir miniupnpc
 	sudo cp *.h miniupnpc/
 
 Yenten
 -------
-MSYS shell:
+MSYS/WSL shell:
 
 	cd \yenten
 	sudo sh autogen.sh
