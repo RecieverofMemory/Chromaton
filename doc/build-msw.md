@@ -8,7 +8,8 @@ TODO: What works?
 Note: releases are cross-compiled using mingw running on Linux.
 
 Primer:
-I am using Ubuntu on windows 10 (google it to find out how to get it, in the microsoft store there will be an "update" button to the right of the "get ubuntu" button so you will need to update if you can't get ubuntu.  You can also just use linux ubuntu.
+I am using Ubuntu on windows 10 (google it to find out how to get it, in the microsoft store there will be an "update" button to the right of the "get ubuntu" button so you will need to update if you can't get ubuntu.  You can also just use linux ubuntu.)
+If you are using windows ubuntu I think you will need to have windows mingw installed in the C: drive.
 
 Some important commands to know:
 
@@ -59,6 +60,7 @@ MSYS shell:
 
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
+For me it was 'C:\MinGW\bin\mingw32-make.exe' to '/c/MinGW/bin/mingw32-make.exe'
 
 	cd /c/openssl-1.0.1k-mgw
 	sudo ./config
