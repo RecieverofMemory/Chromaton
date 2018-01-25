@@ -10,6 +10,10 @@ Primer:
 I am using Ubuntu on windows 10 (google it to find out how to get it, in the microsoft store there will be an "update" button to the right of the "get ubuntu" button so you will need to update if you can't get ubuntu.  You can also just use linux ubuntu.)
 If you are using windows ubuntu I think you will need to have windows mingw installed in the C: drive.
 
+Finding your linux files in your windows system:
+
+C:\Users\{your user name}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home
+
 Some important commands to know:
 
 sudo and sudo su
