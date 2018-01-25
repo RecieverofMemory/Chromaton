@@ -10,7 +10,7 @@ Primer:
 I am using Ubuntu on windows 10 (google it to find out how to get it, in the microsoft store there will be an "update" button to the right of the "get ubuntu" button so you will need to update if you can't get ubuntu.  You can also just use linux ubuntu.)
 If you are using windows ubuntu I think you will need to have windows mingw installed in the C: drive.
 
-Finding your linux files in your windows system:
+Finding your linux files in your windows system; once you untar from the C: your new folders will be located here:
 
 C:\Users\your_user_name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home
 
@@ -37,10 +37,11 @@ Libraries you need to download separately and build:
 
 	name            default path               download
 	--------------------------------------------------------------------------------------------------------------------
-	OpenSSL         \openssl-1.0.1k-mgw        http://www.openssl.org/source/
-	Berkeley DB     \db-4.8.30.NC-mgw          http://www.oracle.com/technology/software/products/berkeley-db/index.html
-	Boost           \boost-1.5x.0-mgw          http://www.boost.org/users/download/
-	miniupnpc       \miniupnpc-2.0-mgw         http://miniupnp.tuxfamily.org/files/
+	OpenSSL         \openssl-1.0.1k		http://www.openssl.org/source/
+	Berkeley DB     \db-4.8.30.NC		http://www.oracle.com/technology/software/products/berkeley-db/index.html
+	Boost           \boost-1.55.0		http://www.boost.org/users/download/
+	Boost Jam	\boost-jam-3.1.18.tgz	https://sourceforge.net/projects/boost/files/boost-jam/3.1.18/
+	miniupnpc       \miniupnpc-2.0		http://miniupnp.tuxfamily.org/files/
 
 Their licenses:
 
@@ -53,27 +54,30 @@ Versions used in this release:
 
 	OpenSSL      1.0.1k
 	Berkeley DB  4.8.30.NC
-	Boost        1.5x.0
+	Boost        1.55.0
 	miniupnpc    2.0
 
-
-OpenSSL
--------
-MSYS shell:
+First:
 
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
 
 https://pureinfotech.com/extract-tar-gz-files-windows-10/
 
-	put the downloaded tar files into the C:
-	sudo tar -xvzf /mnt/c/PATH/TO/TAR-FILE/Desktop/FILE-NAME.tar.gz 
+put the downloaded tar files into the C: then:
+
+	sudo tar -xvzf /mnt/c/PATH/TO/TAR-FILE/FILE-NAME.tar.gz 
 	
+Do this for all the packages above plus boost jam.
+
+OpenSSL
+-------
+MSYS shell:	
 	
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
 
 For me it was 'C:\MinGW\bin\mingw32-make.exe' to '/c/MinGW/bin/mingw32-make.exe'
 
-	cd /c/openssl-1.0.1k-mgw
+	cd /c/openssl-1.0.1k
 	sudo ./config
 	sudo make
 
@@ -94,7 +98,7 @@ building boost jam http://boost.sourceforge.net/doc/html/jam/building.html
 
 	cd to boost jam folder
 	sudo sh ./build.sh
-	cd \boost-1.5x.0-mgw
+	cd \boost-1.55.0
 	sudo bjam toolset=gcc --layout=versioned --build-type=complete stage
 
 MiniUPnPc
@@ -103,7 +107,7 @@ UPnP support is optional, make with `USE_UPNP=` to disable it.
 
 MSYS shell:
 
-	cd /c/miniupnpc-2.0-mgw
+	cd /c/miniupnpc-2.0
 	sudo make -f Makefile.mingw
 	sudo mkdir miniupnpc
 	sudo cp *.h miniupnpc/
