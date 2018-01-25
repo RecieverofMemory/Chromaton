@@ -59,6 +59,11 @@ OpenSSL
 MSYS shell:
 
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
+https://pureinfotech.com/extract-tar-gz-files-windows-10/
+	put the downloaded tar files into the C:
+	sudo tar -xvzf /mnt/c/PATH/TO/TAR-FILE/Desktop/FILE-NAME.tar.gz 
+	
+	
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
 For me it was 'C:\MinGW\bin\mingw32-make.exe' to '/c/MinGW/bin/mingw32-make.exe'
 
