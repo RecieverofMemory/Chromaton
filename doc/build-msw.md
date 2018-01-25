@@ -4,7 +4,6 @@ WINDOWS BUILD NOTES
 
 Compilers Supported
 -------------------
-TODO: What works?
 Note: releases are cross-compiled using mingw running on Linux.
 
 Primer:
