@@ -111,7 +111,7 @@ UPnP support is optional, make with `USE_UPNP=` to disable it.
 MSYS/WSL shell:
 
 	cd /miniupnpc-2.0
-	sudo make -f Makefile.mingw
+	sudo make -f Makefile.mingw  //need to be mingw version or just Makefile?
 	sudo mkdir miniupnpc
 	sudo cp *.h miniupnpc/
 
