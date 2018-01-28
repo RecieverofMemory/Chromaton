@@ -21,10 +21,10 @@
 #include "sha256_c.h"
 #include "yescrypt-best_c.h"
 
-#define YESCRYPT_N 4096
-#define YESCRYPT_R 16
-#define YESCRYPT_P 1
-#define YESCRYPT_T 2
+#define YESCRYPT_N 65536 //2^15=32768. 2^16=65536.  Yenten was 4096.  Bitzeny was 2048.  The higher the more GPU resistant.
+#define YESCRYPT_R 8 //yenten changed this to 16 but as far as I can tell better to increase N than R.  N*R is memory allocation.
+#define YESCRYPT_P 1 // 1 is best for GPU resistance.  Higher is more favorable to GPU's
+#define YESCRYPT_T 2 // 2 is 89% efficiency and will give 45% increase in ASIC resistance.  1 is 96% efficient +25% resistance.  Bitzeny and Yenten had set to 0 (which is 100% efficient, 0% boost in resistance)
 #define YESCRYPT_FLAGS (YESCRYPT_RW | YESCRYPT_PWXFORM)
 
 #ifdef __clang__
