@@ -24,7 +24,7 @@
 #define YESCRYPT_N 4096
 #define YESCRYPT_R 16
 #define YESCRYPT_P 1
-#define YESCRYPT_T 3
+#define YESCRYPT_T 2
 #define YESCRYPT_FLAGS (YESCRYPT_RW | YESCRYPT_PWXFORM)
 
 #ifdef __clang__
