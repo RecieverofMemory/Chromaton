@@ -1,9 +1,12 @@
-Yenten Core integration/staging tree
+Getting Started with Chromaton!
 =====================================
 
-https://conan-equal-newone.github.io/yenten/
+Chromaton.org
 
-* Copyright (c) 2017-     Yenten Core Developers
+No Copyright for Chromaton.  You are free to do whatever the hell you want with it!  Power to the people!
+
+Some of the below may want credit so there:
+* Copyright (c) 2017-2018 Yenten Core Developer(s)
 * Copyright (c) 2009-2017 Bitcoin Core Developers
 * Copyright (c) 2013-2017 Dash Developers (DarkGravityWave3)
 * Copyright (c) 2014-2017 Alexander Peslyak (Yescrypt Original)
@@ -11,11 +14,17 @@ https://conan-equal-newone.github.io/yenten/
 License
 -------
 
-Yenten Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see http://opensource.org/licenses/MIT.
+No licence for Chromaton.  It's yours.  It's mine.  Whatever.  It's ours.
 
-Build yentend on Ubuntu 16.04
+Build chromaton on Ubuntu 16.04
 -------------------
+
+*You will need 2 GB or more of memory on your device or else use SWAP to get it, search about SWAP for more info.
+
+The below will probably also work on "Window's Subsystem for Linux" aka Ubuntu for windows 10.  You will need to search how to
+get it, it uses the microsoft store and you will need to click the update button to the upper right before it will allow you to
+download ubuntu.  Right now there are no windows binaries or installation guide, a bounty is made for someone to do this for us,
+but for now use ubuntu for windows.
 
     sudo apt-get install build-essential
     sudo apt-get install libtool autotools-dev autoconf
@@ -26,12 +35,66 @@ Build yentend on Ubuntu 16.04
     sudo apt-get update
     sudo apt-get install libdb4.8-dev
     sudo apt-get install libdb4.8++-dev
+    sudo apt-get install git
     
-    git clone https://github.com/conan-equal-newone/yenten.git
-    cd yenten
-    ./autogen.sh
-    ./configure --enable-upnp-default --without-gui --disable-tests
-    make
+    git clone https://github.com/RecieverofMemory/Chromaton.git
+    cd Chromaton
+    
+  (to learn how to use cd to navigate around, see later in this guide)
+  
+    sudo ./autogen.sh
+    sudo ./configure --enable-upnp-default --without-gui --disable-tests
+    
+  (upnp checks may fail but it still worked for me anyway.  If during the ./configure step it says libboost no, then rerun the sudo apt-get install libboost line.)
+    
+    sudo make
+    
+  Not quite done.  Now we need to install gksu so we can modify chromaton.conf:
+  
+    sudo apt-get install gksu
+    gksudo nautilus
+    
+  Now enter your password.  In the window that pops up go to computer, then to home, then to your user name folder.  At the top of the window click the Edit button, then preferences, then views.  Click the checkbox show hidden files.  Now you should see a folder named .chromaton and double click that.  you should see chromaton.conf, if not create it (may need to search online for how to create a configuration file).  Now we will need to create rpcuser and rpcpassword.  We will let the program tell us which to use by running chromatond.  cd .. back and lets go into the chromaton folder and the src subfolder.
+  
+    sudo ./chromatond
+    
+  It should tell us what rpcuser and password to select.  Just copy and paste this back into your chromaton.conf file and save it.  If it doesn't allow you to save it do a web search to figure out how.
+    
+  To finally get started navigate to the src folder in chromaton.
+    
+    sudo ./chromaton-cli
+    
+  If it shows stuff then good work!  Basically what we will need to do is run commands by typing
+  
+    ./yenten-cli help
+    
+  or
+  
+    ./yenten-cli setgenerate true
+    
+  You should be able to figure it out from here!
+  
+  Some hints:
+  ----------
+    
+  Sudo means "super user do" basically it gives you admin (root) permissions.  If you forget to put sudo in front of a command it may say permission denied.
+  
+  Git is a program to load stuff from github.
+  
+  cd is "change directory".  cd Chromaton means change directory (folder) to chromaton.  you can use command ls (stands for lists) to see all the files in the current directory.   If you want to go back a directory type: cd .. 
+  
+  ./ means execute file
+  
+  make means to do the compilation.
+  
+
+
+
+
+
+
+
+
 
 Development tips and tricks
 ---------------------------
