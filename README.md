@@ -72,6 +72,8 @@ but for now use ubuntu for windows.
   
     ./chromaton-cli setgenerate true
     
+    ./chromaton-cli getmininginfo
+    
   You should be able to figure it out from here!
   
   Some hints:
