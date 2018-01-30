@@ -1,6 +1,7 @@
 WINDOWS BUILD NOTES
 ===================
 
+*NOTE: I CANNOT GET THIS TO WORK.  Please see yenten's file as it differs from this slightly.  If you can compile chromaton for windows and post a step by step beginners guide, you will recieve 50 million chroma on chromaton.org.
 
 Compilers Supported
 -------------------
