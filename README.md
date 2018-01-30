@@ -66,11 +66,11 @@ but for now use ubuntu for windows.
     
   If it shows stuff then good work!  Basically what we will need to do is run commands by typing
   
-    ./yenten-cli help
+    ./chromaton-cli help
     
   or
   
-    ./yenten-cli setgenerate true
+    ./chromaton-cli setgenerate true
     
   You should be able to figure it out from here!
   
