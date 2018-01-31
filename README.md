@@ -16,7 +16,7 @@ License
 
 No licence for Chromaton.  It's yours.  It's mine.  Whatever.  It's ours.
 
-Build chromaton on Ubuntu 16.04 (No working Windows guide yet but you can try in the doc folder following build-msw.md, there is a bounty if you are sucessful)
+Build chromaton on Ubuntu 16.04 (No working Windows guide yet but you can try in the doc folder following build-msw.md, there is a bounty if you are successful)
 -------------------
 
 *You will need 2 GB or more RAM on your device or else use SWAP to get it, search about SWAP for more info.
