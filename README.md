@@ -19,7 +19,7 @@ No licence for Chromaton.  It's yours.  It's mine.  Whatever.  It's ours.
 Build chromaton on Ubuntu 16.04
 -------------------
 
-*You will need 2 GB or more of memory on your device or else use SWAP to get it, search about SWAP for more info.
+*You will need 2 GB or more RAM on your device or else use SWAP to get it, search about SWAP for more info.
 
 The below will probably also work on "Window's Subsystem for Linux" aka Ubuntu for windows 10.  You will need to search how to
 get it, it uses the microsoft store and you will need to click the update button to the upper right before it will allow you to
