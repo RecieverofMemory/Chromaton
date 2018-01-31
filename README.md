@@ -38,6 +38,9 @@ but for now use ubuntu for windows or linux.
     sudo apt-get install git
     
     git clone https://github.com/RecieverofMemory/Chromaton.git
+    
+  (If it says cannot resolve host github.com, you may need to restart your computer)
+  
     cd Chromaton
     
   (to learn how to use cd to navigate around, see later in this guide)
