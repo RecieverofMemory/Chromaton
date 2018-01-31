@@ -33,6 +33,7 @@ In Terminal Window:
     sudo apt-get install libdb4.8-dev
     sudo apt-get install libdb4.8++-dev
     sudo apt-get install git
+    sudo apt-get install gedit
     
     git clone https://github.com/RecieverofMemory/Chromaton.git
     
