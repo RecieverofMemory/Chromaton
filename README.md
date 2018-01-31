@@ -24,7 +24,7 @@ Build chromaton on Ubuntu 16.04
 The below will probably also work on "Window's Subsystem for Linux" aka Ubuntu for windows 10.  You will need to search how to
 get it, it uses the microsoft store and you will need to click the update button to the upper right before it will allow you to
 download ubuntu.  Right now there are no windows binaries or installation guide, a bounty is made for someone to do this for us,
-but for now use ubuntu for windows.
+but for now use ubuntu for windows or linux.
 
     sudo apt-get install build-essential
     sudo apt-get install libtool autotools-dev autoconf
