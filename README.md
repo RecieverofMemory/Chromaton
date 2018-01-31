@@ -16,15 +16,12 @@ License
 
 No licence for Chromaton.  It's yours.  It's mine.  Whatever.  It's ours.
 
-Build chromaton on Ubuntu 16.04
+Build chromaton on Ubuntu 16.04 (No working Windows guide yet but you can try in the doc folder following build-msw.md, there is a bounty if you are sucessful)
 -------------------
 
 *You will need 2 GB or more RAM on your device or else use SWAP to get it, search about SWAP for more info.
 
-The below will probably also work on "Window's Subsystem for Linux" aka Ubuntu for windows 10.  You will need to search how to
-get it, it uses the microsoft store and you will need to click the update button to the upper right before it will allow you to
-download ubuntu.  Right now there are no windows binaries or installation guide, a bounty is made for someone to do this for us,
-but for now use ubuntu for windows or linux.
+In Terminal Window:
 
     sudo apt-get install build-essential
     sudo apt-get install libtool autotools-dev autoconf
@@ -59,36 +56,50 @@ but for now use ubuntu for windows or linux.
     sudo apt-get install gksu
     gksudo nautilus
     
-  Now enter your password.  In the window that pops up go to computer, then to home, then to your user name folder.  At the top of the window click the Edit button, then preferences, then views.  Click the checkbox show hidden files.  Now you should see a folder named .chromaton and double click that.  you should see chromaton.conf, if not create it (may need to search online for how to create a configuration file).  Now we will need to create rpcuser and rpcpassword.  We will let the program tell us which to use by running chromatond.  cd .. back and lets go into the chromaton folder and the src subfolder.
+  Now enter your password.  In the window that pops up go to computer, then to home, then to your user name folder.  At the top of the window click the Edit button, then preferences, then views.  Click the checkbox show hidden files.  Now you should see a folder named .chromaton and double click that.  you should see chromaton.conf, if not create it with the command:
+    
+    sudo su
+    cd .. 
+    
+  till you are in your home folder
   
-    sudo ./chromatond
+    ls -a
+    
+  This shows you hidden files, you should see .blockchain
+  
+    cd .blockchain
+    gedit blockchain.conf
+    
+  It should open up.  Type in something and hit save.  We will come back and edit this later.  Exit the Terminal window and open up a new one so you are out of superuser mode.  Now we will need to create rpcuser and rpcpassword.  We will let the program tell us which to use by running blockchaind.  To do this  cd .. back and lets go into the chromaton folder and the src subfolder.  Then type:
+  
+    sudo ./blockchaind
     
   It should tell us what rpcuser and password to select.  Just copy and paste this back into your chromaton.conf file and save it.  If it doesn't allow you to save it do a web search to figure out how.
     
   To finally get started navigate to the src folder in chromaton.
     
-    sudo ./chromaton-cli
+    sudo ./blockchain-cli
     
   If it shows stuff then good work!  Basically what we will need to do is run commands by typing
   
-    ./chromaton-cli help
+    ./blockchain-cli help
     
   or
   
-    ./chromaton-cli setgenerate true
+    ./blockchain-cli setgenerate true
     
-    ./chromaton-cli getmininginfo
+    ./blockchain-cli getmininginfo
     
   You should be able to figure it out from here!
   
   Some hints:
   ----------
     
-  Sudo means "super user do" basically it gives you admin (root) permissions.  If you forget to put sudo in front of a command it may say permission denied.
+  Sudo means "super user do" basically it gives you admin (root) permissions.  If you forget to put sudo in front of a command it may say permission denied.  if you are trying to change directories (cd) and it says permission denied you need to enter superuser mode by typing sudo su (hit enter) then try to cd.
   
   Git is a program to load stuff from github.
   
-  cd is "change directory".  cd Chromaton means change directory (folder) to chromaton.  you can use command ls (stands for lists) to see all the files in the current directory.   If you want to go back a directory type: cd .. 
+  cd is "change directory".  cd Chromaton means change directory (folder) to chromaton.  You can use command ls (stands for lists) to see all the files in the current directory.  To show hidden files do ls -a.  If you want to go back a directory type: cd .. 
   
   ./ means execute file
   
@@ -96,7 +107,7 @@ but for now use ubuntu for windows or linux.
   
 
 
-
+If you need help or think this guide needs to be changed, let me (chromos) know on the forums at chromaton.org!  I am here to help you!
 
 
 
