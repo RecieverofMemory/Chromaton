@@ -42,6 +42,8 @@ but for now use ubuntu for windows or linux.
     
   (to learn how to use cd to navigate around, see later in this guide)
   
+  The following two commands may take a little time and it may look like the process stalled, just wait.  During the second command there may be some "no", unless it is of a group of things that were installed above, it should still be ok.
+  
     sudo ./autogen.sh
     sudo ./configure --enable-upnp-default --without-gui --disable-tests
     
