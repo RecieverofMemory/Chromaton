@@ -73,7 +73,11 @@ In Terminal Window:
   Once this is done, then we need to attempt (and fail) to run blockchaind.  This gives us two things; first it gives us our rpcuser and rpcpassword, and also it generates a hidden folder .blockchain in your home/username directory.
   
     cd src
-    sudo ./blockchaind    
+    sudo ./blockchaind
+  
+  If it says it is already running, do
+  
+    sudo ./blockchaind -listen=0
     
   Now copy the rpcuser and rpcpassword lines in the error message. Then do the following:
 
