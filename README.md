@@ -25,7 +25,7 @@ Install ubuntu 16.04.  If you are on a windows PC use this guide using rufus on 
 
 https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0 
 
-However!  If you want to install Ubuntu alongside windows then you will need to choose the format option in RUFUS of UEFI and BIOS.  You will NOT want to boot it in UEFI if you are keeping your windows installation.  If you are doing a dual boot windows/ubuntu, follow this guide exactly (works for windows 10 too):
+However!  If you want to install Ubuntu alongside windows then you will need to choose the format option in RUFUS of UEFI and BIOS.  You will NOT want to boot it in UEFI if you are keeping your windows installation.  If you are doing a dual boot windows/ubuntu, after following the above guide with the one modified step I just mentioned, follow this next guide exactly (works for windows 10 too):
 
 https://www.lifewire.com/ultimate-windows-7-ubuntu-linux-dual-boot-guide-2200653
 
