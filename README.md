@@ -76,7 +76,7 @@ In Terminal Window:
   This shows you hidden files, you should see .blockchain
   
     cd .blockchain
-    gedit blockchain.conf
+    sudo gedit blockchain.conf
     
   It should open up.  Type in something and hit save.  We will come back and edit this later.  Exit the Terminal window and open up a new one so you are out of superuser mode.  Now we will need to create rpcuser and rpcpassword.  We will let the program tell us which to use by running blockchaind.  To do this  cd .. back and lets go into the chromaton folder and the src subfolder.  Then type:
   
