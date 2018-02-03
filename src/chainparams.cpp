@@ -47,7 +47,7 @@ public:
         //     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
         //     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
         //   vMerkleTree: 4a5e1e
-        const char* pszTimestamp = "First Bitcoin Futures Contract Expires Today 1.17.2018";
+        const char* pszTimestamp = "Tondemonee Atasya Kamisama Dayo...2017.10.03";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -58,13 +58,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 11517629035;
+        genesis.nTime    = 1507032424;
         genesis.nBits    = 0x1e3fffff;
-        genesis.nNonce   = ;
+        genesis.nNonce   = 168808;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0xaac2b9e84db6c7583d3dae91a042b7f8efb7d819d267d1699d27a2cad8f1a7e0"));
+        assert(hashGenesisBlock == uint256("0x00001828d845205a951f9609e011775e035b00c7fb476310261ef30460cdccab"));
+        assert(genesis.hashMerkleRoot == uint256("0x92874e7221a12cedde2a7335f733ee03f79694355cda3e383d3f531e3cf9672a"));
 
 //        vFixedSeeds.clear();
         vSeeds.clear();
