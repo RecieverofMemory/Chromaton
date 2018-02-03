@@ -41,6 +41,7 @@ In Terminal Window:
     sudo apt-get install libdb4.8++-dev
     sudo apt-get install git
     sudo apt-get install gedit
+    sudo apt-get install gksu
     
     git clone https://github.com/RecieverofMemory/Chromaton.git
     
@@ -48,7 +49,7 @@ In Terminal Window:
   
     cd Chromaton
     
-  (to learn how to use cd to navigate around, see later in this guide)
+  (If something is capitalized, you need to capitalize it.  To learn how to use cd to navigate around, see later in this guide)
   
   The following two commands may take a little time and it may look like the process stalled, just wait.  During the second command there may be some "no", unless it is of a group of things that were installed above, it should still be ok.
   
@@ -59,32 +60,24 @@ In Terminal Window:
     
     sudo make
     
-  Not quite done.  Now we need to install gksu so we can modify blockchain.conf:
+  Once this is done, then we need to attempt (and fail) to run blockchaind.  This gives us two things; first it gives us our rpcuser and rpcpassword, and also it generates a hidden folder .blockchain in your home/username directory.
   
-    sudo apt-get install gksu
-    gksudo nautilus
+    cd src
+    sudo ./blockchaind    
     
-  Now enter your password.  In the window that pops up go to computer, then to home, then to your user name folder.  At the top of the window click the Edit button, then preferences, then views.  Click the checkbox show hidden files.  Now you should see a folder named .blockchain and double click that.  you should see blockchain.conf, if not create it with the command:
-    
-    sudo su
-    cd .. 
-    
-  till you are in your home folder
-  
-    ls -a
-    
-  This shows you hidden files, you should see .blockchain
-  
+  Now copy the rpcuser and rpcpassword lines in the error message. Then do the following:
+
+    cd ..
+    cd ..
     cd .blockchain
     sudo gedit blockchain.conf
     
-  It should open up.  Type in something and hit save.  We will come back and edit this later.  Exit the Terminal window and open up a new one so you are out of superuser mode.  Now we will need to create rpcuser and rpcpassword.  We will let the program tell us which to use by running blockchaind.  To do this  cd .. back and lets go into the chromaton folder and the src subfolder.  Then type:
+  Now paste what you copied and hit save.  The blockchain.conf should look something like this:
   
-    sudo ./blockchaind
+    rpcuser=yohellorpc
+    rpcpassword=8hdCNCKLvsP53cZqmv8G576893jdhekkeiu8390904EL
     
-  It should tell us what rpcuser and password to select.  Just copy and paste this back into your chromaton.conf file and save it.  If it doesn't allow you to save it do a web search to figure out how.
-    
-  To finally get started navigate to the src folder in chromaton.
+  To finally get started navigate to the src folder in Chromaton. (You will need to do a cd .. and cd Chromaton and cd src)
     
     sudo ./blockchain-cli
     
@@ -103,7 +96,13 @@ In Terminal Window:
   Some hints:
   ----------
     
-  Sudo means "super user do" basically it gives you admin (root) permissions.  If you forget to put sudo in front of a command it may say permission denied.  if you are trying to change directories (cd) and it says permission denied you need to enter superuser mode by typing sudo su (hit enter) then try to cd.
+  Sudo means "super user do" basically it gives you admin (root) permissions.  If you forget to put sudo in front of a command it may say permission denied.  If you are trying to change directories (cd) and it says permission denied you need to enter superuser mode by typing sudo su (hit enter) then try to cd.
+  
+  installing gksu as we did lets you do the following command:
+  
+    gksudo nautilus
+    
+  When you do this enter your password and you can browse by going to computer home etc.  You can see hidden folders by going to edit->preferences->views and check "show hidden and backup files"
   
   Git is a program to load stuff from github.
   
