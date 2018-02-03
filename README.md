@@ -86,20 +86,20 @@ In Terminal Window:
     cd .blockchain
     sudo gedit blockchain.conf
     
-  Now paste what you copied and hit save.  The blockchain.conf should look something like this:
+  Now paste what you copied, it should look like this:
   
     rpcuser=yohellorpc
     rpcpassword=8hdCNCKLvsP53cZqmv8G576893jdhekkeiu8390904EL
     
-  To finally get started navigate to the src folder in Chromaton. (You will need to do a cd .. and cd Chromaton and cd src)
+  Hit save, wait for it to finish saving, then exit the window and your terminal command line should reappear.  To finally get started navigate to the src folder in Chromaton. (You will need to do a cd .. and cd Chromaton and cd src).  Then do:
     
     sudo ./blockchain-cli
     
-  If it shows stuff then good work!  Basically what we will need to do is run commands by typing
+  It should show. The real test is to run any of the following commands:
   
     ./blockchain-cli help
     
-  or
+  or to start mining:
   
     ./blockchain-cli setgenerate true
     
