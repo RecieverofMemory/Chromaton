@@ -3,7 +3,7 @@ Getting Started with Chromaton!
 
 Chromaton.org
 
-No Copyright for Chromaton.  You are free to do whatever the hell you want with it!  Power to the people!
+No Copyright for Chromaton.  You are free to do whatever the heaven you want with it!  Power to the people!
 
 Some of the below may want credit so there:
 * Copyright (c) 2017-2018 Yenten Core Developer(s)
