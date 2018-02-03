@@ -58,13 +58,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1507032424;
+        genesis.nTime    = 1517570155;
         genesis.nBits    = 0x1e3fffff;
-        genesis.nNonce   = 168765;
+        genesis.nNonce   = 1686985031;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00001828d845205a951f9609e011775e035b00c7fb476310261ef30460cdccab"));
-        assert(genesis.hashMerkleRoot == uint256("0x92874e7221a12cedde2a7335f733ee03f79694355cda3e383d3f531e3cf9672a"));
+        assert(hashGenesisBlock == uint256("0x000000000add6d8b98719bc158a00f38ebdcc97e1cd29d619aaf3383cee5d184"));
+        assert(genesis.hashMerkleRoot == uint256("0xaac2b9e84db6c7583d3dae91a042b7f8efb7d819d267d1699d27a2cad8f1a7e0"));
 
 //        vFixedSeeds.clear();
         vSeeds.clear();
