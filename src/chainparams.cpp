@@ -124,8 +124,8 @@ public:
         strDataDir = "testnet3";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1516245716;
-        genesis.nNonce = 2382344;
+        genesis.nTime = 1507032223;
+        genesis.nNonce = 238202;
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x00002a66f0c687f619934409d376c52fe721833f05940e4c20deaaa0122d7fb8"));
 
