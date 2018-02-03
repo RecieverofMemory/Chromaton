@@ -29,10 +29,10 @@ However!  If you want to install Ubuntu alongside windows then you will need to 
 
 https://www.lifewire.com/ultimate-windows-7-ubuntu-linux-dual-boot-guide-2200653
 
-If you are installing Ubuntu as the only operating system on the computer, follow the first guide and the link given at the endo of that guide to installation instructions.
+If you are installing Ubuntu as the only operating system on the computer, follow the first guide and the link given at the end of that guide to installation instructions.
 
 
-If your usb drive doesn't seem to be getting the right capacity you will need to modify it's partitions.  Use EaseUS partition master and delete the partitions off the usb drive and reformat it.  Then run the above tutorial.
+If your usb drive doesn't seem to be getting the right capacity you will need to modify it's partitions.  Use EaseUS partition master and delete the partitions off the usb drive and reformat it.  Then run the first tutorial.
 
 After ubuntu is installed find the terminal window and do the following:
 
