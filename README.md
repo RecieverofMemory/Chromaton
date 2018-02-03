@@ -22,7 +22,10 @@ Build chromaton on Ubuntu 16.04 (No working Windows guide yet but you can try in
 *You will need 2 GB or more RAM on your device or else use SWAP to get it, search about SWAP for more info.
 
 Install ubuntu 16.04.  If you are on a windows PC use this guide using rufus on a usb drive:
-https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0
+https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0 
+However!  If you want to install Ubunto alongside windows then you will need to choose the format option in RUFUS of UEFI and Boot.  You will NOT want to boot it in UEFI if you are keeping your windows installation.  If you are doing a dual boot windows/ubuntu, follow this guide exactly (works for windows 10 too):
+https://www.lifewire.com/ultimate-windows-7-ubuntu-linux-dual-boot-guide-2200653
+
 
 If your usb drive doesn't seem to be getting the right capacity you will need to modify it's partitions.  Use EaseUS partition master and delete the partitions off the usb drive and reformat it.  Then run the above tutorial.
 
