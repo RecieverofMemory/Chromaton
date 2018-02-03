@@ -51,8 +51,6 @@ In Terminal Window:
     sudo apt-get install gedit
     sudo apt-get install gksu
     sudo apt-get install miniupnpc
-    sudo apt-get install apt-file
-    sudo apt-file update
     sudo apt-get install libminiupnpc-dev
     
     git clone https://github.com/RecieverofMemory/Chromaton.git
@@ -123,6 +121,11 @@ In Terminal Window:
   ./ means execute file
   
   make means to do the compilation.
+  
+  if you need help figuring out missing dependeencies during compiling the following may help:
+  
+    sudo apt-get install apt-file
+    sudo apt-file update
   
 
 
