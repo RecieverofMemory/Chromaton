@@ -50,6 +50,10 @@ In Terminal Window:
     sudo apt-get install git
     sudo apt-get install gedit
     sudo apt-get install gksu
+    sudo apt-get install miniupnpc
+    sudo apt-get install apt-file
+    sudo apt-file update
+    sudo apt-get install libminiupnpc-dev
     
     git clone https://github.com/RecieverofMemory/Chromaton.git
     
