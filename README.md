@@ -44,7 +44,7 @@ In Terminal Window:
     
     git clone https://github.com/RecieverofMemory/Chromaton.git
     
-  (If it says cannot resolve host github.com, you may need to restart your computer)
+  (If you forget the .git at the end it should still work.  If it says cannot resolve host github.com, you may need to restart your computer)
   
     cd Chromaton
     
