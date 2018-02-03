@@ -21,6 +21,13 @@ Build chromaton on Ubuntu 16.04 (No working Windows guide yet but you can try in
 
 *You will need 2 GB or more RAM on your device or else use SWAP to get it, search about SWAP for more info.
 
+Install ubuntu 16.04.  If you are on a windows PC use this guide using rufus on a usb drive:
+https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#0
+
+If your usb drive doesn't seem to be getting the right capacity you will need to modify it's partitions.  Use EaseUS partition master and delete the partitions off the usb drive and reformat it.  Then run the above tutorial.
+
+After ubuntu is installed find the terminal window and do the following:
+
 In Terminal Window:
 
     sudo apt-get install build-essential
@@ -52,12 +59,12 @@ In Terminal Window:
     
     sudo make
     
-  Not quite done.  Now we need to install gksu so we can modify chromaton.conf:
+  Not quite done.  Now we need to install gksu so we can modify blockchain.conf:
   
     sudo apt-get install gksu
     gksudo nautilus
     
-  Now enter your password.  In the window that pops up go to computer, then to home, then to your user name folder.  At the top of the window click the Edit button, then preferences, then views.  Click the checkbox show hidden files.  Now you should see a folder named .chromaton and double click that.  you should see chromaton.conf, if not create it with the command:
+  Now enter your password.  In the window that pops up go to computer, then to home, then to your user name folder.  At the top of the window click the Edit button, then preferences, then views.  Click the checkbox show hidden files.  Now you should see a folder named .blockchain and double click that.  you should see blockchain.conf, if not create it with the command:
     
     sudo su
     cd .. 
