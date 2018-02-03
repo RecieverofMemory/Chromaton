@@ -66,7 +66,7 @@ In Terminal Window:
     sudo ./autogen.sh
     sudo ./configure --enable-upnp-default --without-gui --disable-tests
     
-  (the --disable-tests is optional.  Leave this out if you want the test results.  Also you can add --enable-debug in the code if you want for seeing debugging results logged in debug.log.  upnp checks may fail but it still worked for me anyway.  If during the ./configure step it says libboost no, then rerun the sudo apt-get install libboost line.)
+  (the --disable-tests is optional.  Leave this out if you want the test results.  Also you can add --enable-debug in the code if you want for seeing debugging results logged in debug.log.  If during the ./configure step it says libboost no, then rerun the sudo apt-get install libboost line.)
     
     sudo make
     
