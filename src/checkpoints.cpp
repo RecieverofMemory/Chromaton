@@ -49,27 +49,27 @@ namespace Checkpoints
         576     // * estimated number of transactions per day after checkpoint
     };
 
-    static MapCheckpoints mapCheckpointsTestnet =
-        boost::assign::map_list_of
-        (0, uint256("0x00002a66f0c687f619934409d376c52fe721833f05940e4c20deaaa0122d7fb8"))
-        ;
-    static const CCheckpointData dataTestnet = {
-        &mapCheckpointsTestnet,
-        1516245716,
-        0,
-        300
-    };
+    //static MapCheckpoints mapCheckpointsTestnet =
+        //boost::assign::map_list_of
+        //(0, uint256("0x00002a66f0c687f619934409d376c52fe721833f05940e4c20deaaa0122d7fb8"))
+        //;
+    //static const CCheckpointData dataTestnet = {
+        //&mapCheckpointsTestnet,
+        //1516245716,
+        //0,
+        //300
+    //};
 
-    static MapCheckpoints mapCheckpointsRegtest =
-        boost::assign::map_list_of
-        ( 0, uint256("7f84c3ff0d9c579380a6c8d9c9e4acd4425a3ade4a7df65d97138a89bc541361"))
-        ;
-    static const CCheckpointData dataRegtest = {
-        &mapCheckpointsRegtest,
-        0,
-        0,
-        0
-    };
+    //static MapCheckpoints mapCheckpointsRegtest =
+        //boost::assign::map_list_of
+        //( 0, uint256("7f84c3ff0d9c579380a6c8d9c9e4acd4425a3ade4a7df65d97138a89bc541361"))
+        //;
+    //static const CCheckpointData dataRegtest = {
+        //&mapCheckpointsRegtest,
+        //0,
+        //0,
+        //0
+    //};
 
     const CCheckpointData &Checkpoints() {
         if (Params().NetworkID() == CChainParams::TESTNET)
